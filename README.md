@@ -22,9 +22,12 @@ npm install node-shgbit-xy-api --save
   let apiPath = "meetingroom/910058486449/vods"; //接口v1之后的内容
   let apiParams =    {
        startTime:0,           //接口参数，企业id暂时版本都带的，所以自动填充不需要输入
- 		endTime:1470452561000
+ 		endTime:1470452561000,
+    enterprise_id:""
    }
-  var url = xyapi.getApiUrl(apiPath, apiParams)
+   let httpMethod = "GET"
+   <!-- entity post put时候的实体 -->
+  var url = xyapi.getApiUrl(apiPath, apiParams,httpMethod[,entity])
   //然后可以使用request 等库直接请求url
 ```
 
